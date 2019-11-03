@@ -1,0 +1,75 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671
+{\fonttbl\f0\froman\fcharset0 Times-Bold;\f1\froman\fcharset0 Times-Roman;\f2\fswiss\fcharset0 ArialMT;
+}
+{\colortbl;\red255\green255\blue255;\red11\green85\blue25;\red255\green255\blue255;}
+{\*\expandedcolortbl;;\cssrgb\c0\c40000\c12941;\cssrgb\c100000\c100000\c100000;}
+\margl1440\margr1440\vieww16100\viewh9200\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\b\fs24 \cf0 Name: Mina Tawfik\
+email: mtawfik@scu.edu\
+\
+This is the README for my final project\
+
+\f1\b0 \
+This program is designed to scrape up-to-date Liverpool FC player stats, then tweet them out through Twitter. It is intended to be used on game day so you can inform your followers about the stats when you decide to run the program. \
+\
+
+\f0\b Before you can run this program for yourself there are a couple things you need to do to ensure its success:
+\f1\b0 \
+\
+
+\f0\b First:
+\f1\b0 \
+	\
+	If you don\'92t have a twitter account, create one. \
+	\
+	You need to set up a twitter app through Twitters API service. Visit {\field{\*\fldinst{HYPERLINK "https://developer.twitter.com/"}}{\fldrslt 
+\f2\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\ul \ulc2 \outl0\strokewidth0 \strokec2 https://developer.twitter.com/}}
+\f2\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\ul \ulc2 \outl0\strokewidth0 \strokec2   
+\f1\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \ulnone \outl0\strokewidth0 to set up your API. They will guide through the process. Once you sign up, they will have to approve your request to use their service. Your dev account can be approved from a matter of seconds to about a day. After your dev account is approved you are ready to set up an App.  
+\f0\b Now comes the important part: once your app is set up there are four codes that you will need to copy into the keys,py file located in my final project file. These four codes are called: Consumer key, Consumer secret key, Access token, Access token secret. Just copy the four codes and paste them in where you read \'91xxxx\'92 for each respective code.  The variables I created are in the same order as the codes listed on \'91keys and tokens\'92 page on the twitter developer site.  Make sure to leave the apostrophes around your codes. \
+\
+Second: 
+\f1\b0 \
+	\
+	Before running any code in terminal you need to create a file within the project folder called: \'93
+\f0\b playerData.txt
+\f1\b0 \'94. This is where all the Liverpool player data will be stored after the program scrapes it from the premier league website. 
+\f0\b Make sure you create this playerData.txt within the project folder which is called: \'93MinaTawfik_omis30_project_s2019\'94. You only have to do this once.\
+
+\f1\b0 \
+also make sure the libraries I use within the code are installed on your version of anaconda\
+\
+\
+
+\f0\b Now you are ready to run the program:
+\f1\b0 \
+\
+	1. First run the file called \'91scraping2.py\'92 in terminal. This code scrapes the premier league website for Liverpool\'92s team stats. It then populates \'93playerData.txt\'94 (the file you made during the second step of the setup). Open \'93playerData.txt\'94 file and make sure that the code populated it with the player data. \
+\
+	2. Next you are ready to run the twitter code. In terminal run the file called \'93twitterbot.py\'94. Since you connected your twitter dev app to the code through those four access codes the program will tweet out each player\'92s stats through your twitter account. The player stats are accessed through the \'93playerData.txt created in\'93scraping2.py\'94. \
+	\
+	3. To run the program again (maybe on a different day), you have to delete all the tweets it spits out after because twitter blocks duplicate tweets for any dev app to control for spam. So if you want to tweet out the player stats again you must delete the tweets it previously spit out. \
+\
+	4. Every time you want to run the program, run scraping2.py first then run twitterbot.py\
+
+\f0\b \
+Learning Something New:\
+\
+
+\f1\b0 This project challenged and pushed me in a few ways. For starters I did not have any group members so all the code you see was done by me. I applied two major new concepts: scraping and twitter api. Scraping was an interesting challenge because it involved html. I primarily used the re and requests library to loop through the premier league website to attain the data. Then I used json to write the data into the playerData.txt. For the twitter api aspect I used the tweepy library to automate the tweets and split them up by each player. Json was also used to read in playerData.txt into twitterbot.py. Although I initially planned to make the twitter bot reply to users, I could not figure out how to set up the reply bot in time for the due date, but I ensured that the bot will still tweet out all the player stats when the program is run. \
+\
+
+\f0\b Future Applications:\
+\
+
+\f1\b0 During the summer I plan to automate the app by connecting it to a server. This will allow it to run without having to leave my computer on. I also plan to solve the reply bot problem I ran into. I can also expand the data base of players and include every team from the premier league. I want to dive deeper into these matters over the summer so I can better improve this program. \
+\
+\
+\
+\
+\
+}
